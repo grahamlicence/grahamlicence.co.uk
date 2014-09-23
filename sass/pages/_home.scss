@@ -1,0 +1,19 @@
+.category {
+    margin-bottom: 2em;
+    
+    @media #{$large} {
+        width: 50%;
+        display: inline-block;
+        padding: 0.5em;
+        margin-bottom: 0; 
+    }
+}
+
+.home {
+    @media #{$large} {
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+}

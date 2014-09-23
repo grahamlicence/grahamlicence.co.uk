@@ -419,13 +419,184 @@ table {
   border-spacing: 0;
 }
 
-/* line 1, ../../../sass/modules/_typography.scss */
+/* line 1, ../../../sass/base/_layout.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 7, ../../../sass/base/_layout.scss */
+html,
+body,
+button {
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/* line 15, ../../../sass/base/_layout.scss */
+html {
+  height: 100%;
+}
+
+/* line 18, ../../../sass/base/_layout.scss */
+body {
+  height: 100%;
+  background: #5affc9;
+  color: #008d5f;
+}
+
+/* line 24, ../../../sass/base/_layout.scss */
+.wrapper {
+  width: 100%;
+}
+@media only screen and (min-width: 640px) {
+  /* line 24, ../../../sass/base/_layout.scss */
+  .wrapper {
+    height: 100%;
+    display: flex;
+  }
+}
+
+/* line 32, ../../../sass/base/_layout.scss */
+.sidebar {
+  background-color: rgba(8, 78, 151, 0.8);
+  padding: 1em 1em 0.5em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+/* line 39, ../../../sass/base/_layout.scss */
+.sidebar h2 {
+  color: #74b4f7;
+}
+/* line 42, ../../../sass/base/_layout.scss */
+.sidebar a {
+  color: #E5E6E7;
+}
+@media only screen and (min-width: 640px) {
+  /* line 32, ../../../sass/base/_layout.scss */
+  .sidebar {
+    position: relative;
+    width: 30%;
+  }
+}
+
+/* line 52, ../../../sass/base/_layout.scss */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 56, ../../../sass/base/_layout.scss */
+.main-nav li {
+  float: left;
+  margin-right: 0.3em;
+}
+
+/* line 62, ../../../sass/base/_layout.scss */
+.main-content {
+  padding: 7em 1em 0.5em;
+}
+@media only screen and (min-width: 640px) {
+  /* line 62, ../../../sass/base/_layout.scss */
+  .main-content {
+    padding: 0.5em 1em;
+    width: 70%;
+  }
+}
+
+@font-face {
+  font-family: 'noto_sansregular';
+  src: url("../fonts/notosans-regular-webfont.eot");
+  src: url("../fonts/notosans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-regular-webfont.woff2") format("woff2"), url("../fonts/notosans-regular-webfont.woff") format("woff"), url("../fonts/notosans-regular-webfont.ttf") format("truetype"), url("../fonts/notosans-regular-webfont.svg#noto_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'noto_sansbold';
+  src: url("../fonts/notosans-bold-webfont.eot");
+  src: url("../fonts/notosans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-bold-webfont.woff2") format("woff2"), url("../fonts/notosans-bold-webfont.woff") format("woff"), url("../fonts/notosans-bold-webfont.ttf") format("truetype"), url("../fonts/notosans-bold-webfont.svg#noto_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 55, ../../../sass/modules/_typography.scss */
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'noto_sansregular', Arial;
+  color: #008d5f;
+  margin-top: 0;
+}
+
+/* line 60, ../../../sass/modules/_typography.scss */
 h1 {
   font-size: 1.6em;
 }
-/* line 3, ../../../sass/modules/_typography.scss */
-h1:after {
-  content: " ready";
+
+/* line 64, ../../../sass/modules/_typography.scss */
+p {
+  font-size: 1.1em;
+}
+
+/* line 68, ../../../sass/modules/_typography.scss */
+strong {
+  font-family: 'noto_sansbold';
+}
+
+/* line 72, ../../../sass/modules/_typography.scss */
+a {
+  font-family: 'noto_sansregular';
+  color: #993400;
+  text-decoration: none;
+}
+/* line 76, ../../../sass/modules/_typography.scss */
+a:visited {
+  color: #FF5600;
+}
+/* line 79, ../../../sass/modules/_typography.scss */
+a:hover, a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* line 86, ../../../sass/modules/_typography.scss */
+button,
+.focus-link {
+  background-color: #993400;
+  color: #ff9a66;
+  border: none;
+  padding: 0.3em 1em;
+  border-radius: 3px;
+}
+/* line 93, ../../../sass/modules/_typography.scss */
+button:hover, button:focus,
+.focus-link:hover,
+.focus-link:focus {
+  background-color: #FF5600;
+}
+
+/* line 1, ../../../sass/pages/_home.scss */
+.category {
+  margin-bottom: 2em;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 1, ../../../sass/pages/_home.scss */
+  .category {
+    width: 50%;
+    display: inline-block;
+    padding: 0.5em;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 12, ../../../sass/pages/_home.scss */
+  .home {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

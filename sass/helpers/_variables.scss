@@ -1,0 +1,33 @@
+// colours
+$primary: #00F3A3;          // green
+$secondary: #1380F2;        // blue
+$tertiary: #FF9900;         // yellow
+$complementary: #FF5600;    // orange
+$black: #01080F;
+$white: #E5E6E7;
+
+// temp greyscale
+// $primary: #cecece;          // green
+// $secondary: #333;        // blue
+// $tertiary: #222;         // yellow
+// $complementary: #999;    // orange
+
+$change: 20%;
+
+$primaryDark: darken($primary, $change);
+$primaryLight: lighten($primary, $change);
+
+$secondaryDark: darken($secondary, $change);
+$secondaryLight: lighten($secondary, $change);
+
+$tertiaryDark: darken($tertiary, $change);
+$tertiaryLight: lighten($tertiary, $change);
+
+$complementaryDark: darken($complementary, $change);
+$complementaryLight: lighten($complementary, $change);
+
+
+// Breakpoints
+$small: 'only screen and (min-width: 640px)';
+$medium: 'only screen and (min-width: 768px)';
+$large: 'only screen and (min-width: 1024px)';

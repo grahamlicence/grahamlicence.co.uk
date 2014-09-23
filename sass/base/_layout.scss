@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+button {
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: $primaryLight;
+    color: $primaryDark;
+}
+
+.wrapper {
+    width: 100%;
+    @media #{$small} {
+        height: 100%;
+        display: flex;
+    }
+}
+
+.sidebar {
+    background-color: rgba($secondaryDark, 0.8);
+    padding: 1em 1em 0.5em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    h2 {
+        color: $secondaryLight;
+    }
+    a {
+        color: $white;
+    }
+    @media #{$small} {
+        position: relative;
+        width: 30%;
+    }
+}
+
+.main-nav {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        float: left;
+        margin-right: 0.3em;
+    }
+}
+
+.main-content {
+    padding: 7em 1em 0.5em;
+    @media #{$small} {
+        padding: 0.5em 1em;
+        width: 70%;
+    }
+}

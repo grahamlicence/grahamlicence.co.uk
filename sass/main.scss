@@ -1,2 +1,9 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+
 @import "base/normalize";
+@import "base/layout";
+
 @import "modules/typography";
+
+@import "pages/home";
