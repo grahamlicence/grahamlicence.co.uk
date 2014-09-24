@@ -436,75 +436,148 @@ button {
 }
 
 /* line 15, ../../../sass/base/_layout.scss */
-html {
-  height: 100%;
-}
-
-/* line 18, ../../../sass/base/_layout.scss */
+html,
 body {
   height: 100%;
-  background: #5affc9;
-  color: #008d5f;
 }
 
-/* line 24, ../../../sass/base/_layout.scss */
+/* line 20, ../../../sass/base/_layout.scss */
 .wrapper {
   width: 100%;
+  max-width: 70em;
 }
 @media only screen and (min-width: 640px) {
-  /* line 24, ../../../sass/base/_layout.scss */
+  /* line 20, ../../../sass/base/_layout.scss */
   .wrapper {
     height: 100%;
     display: flex;
   }
 }
 
-/* line 32, ../../../sass/base/_layout.scss */
+/* line 29, ../../../sass/base/_layout.scss */
 .sidebar {
-  background-color: rgba(8, 78, 151, 0.8);
+  overflow: hidden;
   padding: 1em 1em 0.5em;
-  position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
-}
-/* line 39, ../../../sass/base/_layout.scss */
-.sidebar h2 {
-  color: #74b4f7;
-}
-/* line 42, ../../../sass/base/_layout.scss */
-.sidebar a {
-  color: #E5E6E7;
 }
 @media only screen and (min-width: 640px) {
-  /* line 32, ../../../sass/base/_layout.scss */
+  /* line 29, ../../../sass/base/_layout.scss */
   .sidebar {
-    position: relative;
     width: 30%;
   }
 }
 
-/* line 52, ../../../sass/base/_layout.scss */
+/* line 39, ../../../sass/base/_layout.scss */
 .main-nav ul {
   list-style: none;
   padding: 0;
 }
-/* line 56, ../../../sass/base/_layout.scss */
+/* line 43, ../../../sass/base/_layout.scss */
 .main-nav li {
   float: left;
   margin-right: 0.3em;
 }
 
-/* line 62, ../../../sass/base/_layout.scss */
+/* line 49, ../../../sass/base/_layout.scss */
 .main-content {
-  padding: 7em 1em 0.5em;
+  padding: 0.5em 1em;
 }
 @media only screen and (min-width: 640px) {
-  /* line 62, ../../../sass/base/_layout.scss */
+  /* line 49, ../../../sass/base/_layout.scss */
   .main-content {
-    padding: 0.5em 1em;
     width: 70%;
   }
+}
+
+/* line 3, ../../../sass/base/_themes.scss */
+.theme-primary {
+  background-color: #00F3A3;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5affc9), to(#00F3A3));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #5affc9, #00F3A3);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #5affc9, #00F3A3);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #5affc9, #00F3A3);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #5affc9, #00F3A3);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #5affc9, #00F3A3);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5affc9', EndColorStr='#00F3A3');
+  color: #008d5f;
+}
+/* line 6, ../../../sass/base/_themes.scss */
+.theme-primary h1, .theme-primary h2, .theme-primary h3 {
+  color: #008d5f;
+}
+/* line 10, ../../../sass/base/_themes.scss */
+.theme-primary h4, .theme-primary h5, .theme-primary h6, .theme-primary p {
+  color: #005a3c;
+}
+/* line 13, ../../../sass/base/_themes.scss */
+.theme-primary .sidebar {
+  background-color: #00F3A3;
+}
+/* line 17, ../../../sass/base/_themes.scss */
+.theme-secondary {
+  background-color: #1380F2;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#74b4f7), to(#1380F2));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #74b4f7, #1380F2);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #74b4f7, #1380F2);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #74b4f7, #1380F2);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #74b4f7, #1380F2);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #74b4f7, #1380F2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#74b4f7', EndColorStr='#1380F2');
+  color: #084e97;
+}
+/* line 20, ../../../sass/base/_themes.scss */
+.theme-secondary h1, .theme-secondary h2, .theme-secondary h3 {
+  color: #084e97;
+}
+/* line 23, ../../../sass/base/_themes.scss */
+.theme-secondary h4, .theme-secondary h5, .theme-secondary h6, .theme-secondary p {
+  color: #063566;
+}
+/* line 26, ../../../sass/base/_themes.scss */
+.theme-secondary .sidebar {
+  background-color: #1380F2;
+}
+/* line 30, ../../../sass/base/_themes.scss */
+.theme-tertiary {
+  background-color: #FF9900;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc266), to(#FF9900));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #ffc266, #FF9900);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #ffc266, #FF9900);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #ffc266, #FF9900);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #ffc266, #FF9900);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #ffc266, #FF9900);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffc266', EndColorStr='#FF9900');
+  color: #995c00;
+}
+/* line 33, ../../../sass/base/_themes.scss */
+.theme-tertiary h1, .theme-tertiary h2, .theme-tertiary h3 {
+  color: #995c00;
+}
+/* line 36, ../../../sass/base/_themes.scss */
+.theme-tertiary h4, .theme-tertiary h5, .theme-tertiary h6, .theme-tertiary p {
+  color: #663d00;
+}
+/* line 39, ../../../sass/base/_themes.scss */
+.theme-tertiary .sidebar {
+  background-color: #FF9900;
 }
 
 @font-face {
@@ -524,42 +597,41 @@ body {
 /* line 55, ../../../sass/modules/_typography.scss */
 h1, h2, h3, h4, h5, h6, p {
   font-family: 'noto_sansregular', Arial;
-  color: #008d5f;
   margin-top: 0;
 }
 
-/* line 60, ../../../sass/modules/_typography.scss */
+/* line 59, ../../../sass/modules/_typography.scss */
 h1 {
   font-size: 1.6em;
 }
 
-/* line 64, ../../../sass/modules/_typography.scss */
+/* line 63, ../../../sass/modules/_typography.scss */
 p {
   font-size: 1.1em;
 }
 
-/* line 68, ../../../sass/modules/_typography.scss */
+/* line 67, ../../../sass/modules/_typography.scss */
 strong {
   font-family: 'noto_sansbold';
 }
 
-/* line 72, ../../../sass/modules/_typography.scss */
+/* line 71, ../../../sass/modules/_typography.scss */
 a {
   font-family: 'noto_sansregular';
   color: #993400;
   text-decoration: none;
 }
-/* line 76, ../../../sass/modules/_typography.scss */
+/* line 75, ../../../sass/modules/_typography.scss */
 a:visited {
   color: #FF5600;
 }
-/* line 79, ../../../sass/modules/_typography.scss */
+/* line 78, ../../../sass/modules/_typography.scss */
 a:hover, a:focus {
   text-decoration: underline;
   outline: none;
 }
 
-/* line 86, ../../../sass/modules/_typography.scss */
+/* line 85, ../../../sass/modules/_typography.scss */
 button,
 .focus-link {
   background-color: #993400;
@@ -568,7 +640,7 @@ button,
   padding: 0.3em 1em;
   border-radius: 3px;
 }
-/* line 93, ../../../sass/modules/_typography.scss */
+/* line 92, ../../../sass/modules/_typography.scss */
 button:hover, button:focus,
 .focus-link:hover,
 .focus-link:focus {
