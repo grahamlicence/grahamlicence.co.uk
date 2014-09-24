@@ -88,6 +88,15 @@ module.exports = function(grunt) {
             }
         },
 
+        connect: {
+          dev: {
+            options: {
+              port: 8000,
+              base: './dist/'
+            }
+          }
+        },
+
         assemble: {
           options: {
             layout: 'page.hbs',
@@ -111,6 +120,10 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 }
+            },
+            html: {
+                files: 'src/**/*.hbs',
+                tasks: ['assemble']
             }
         }
     });
@@ -119,8 +132,7 @@ module.exports = function(grunt) {
       // The default task runs when you just run `grunt`.
       //   "js" and "css" tasks process their respective files. 
     
-    grunt.registerTask('css', ['compass']);
     grunt.registerTask('js', ['uglify', 'concat']);
 
-    grunt.registerTask('default', ['css', 'js', 'watch']);
+    grunt.registerTask('default', ['compass', 'assemble', 'connect', 'watch']);
 };

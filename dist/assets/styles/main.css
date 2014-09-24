@@ -441,49 +441,49 @@ body {
   height: 100%;
 }
 
-/* line 20, ../../../sass/base/_layout.scss */
+/* line 21, ../../../sass/base/_layout.scss */
 .wrapper {
   width: 100%;
   max-width: 70em;
 }
 @media only screen and (min-width: 640px) {
-  /* line 20, ../../../sass/base/_layout.scss */
+  /* line 21, ../../../sass/base/_layout.scss */
   .wrapper {
     height: 100%;
     display: flex;
   }
 }
 
-/* line 29, ../../../sass/base/_layout.scss */
+/* line 30, ../../../sass/base/_layout.scss */
 .sidebar {
   overflow: hidden;
   padding: 1em 1em 0.5em;
   width: 100%;
 }
 @media only screen and (min-width: 640px) {
-  /* line 29, ../../../sass/base/_layout.scss */
+  /* line 30, ../../../sass/base/_layout.scss */
   .sidebar {
     width: 30%;
   }
 }
 
-/* line 39, ../../../sass/base/_layout.scss */
+/* line 40, ../../../sass/base/_layout.scss */
 .main-nav ul {
   list-style: none;
   padding: 0;
 }
-/* line 43, ../../../sass/base/_layout.scss */
+/* line 44, ../../../sass/base/_layout.scss */
 .main-nav li {
   float: left;
   margin-right: 0.3em;
 }
 
-/* line 49, ../../../sass/base/_layout.scss */
+/* line 50, ../../../sass/base/_layout.scss */
 .main-content {
   padding: 0.5em 1em;
 }
 @media only screen and (min-width: 640px) {
-  /* line 49, ../../../sass/base/_layout.scss */
+  /* line 50, ../../../sass/base/_layout.scss */
   .main-content {
     width: 70%;
   }
@@ -493,23 +493,23 @@ body {
 .theme-primary {
   background-color: #00F3A3;
   /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5affc9), to(#00F3A3));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#73ffd1), to(#00F3A3));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #5affc9, #00F3A3);
+  background-image: -webkit-linear-gradient(top, #73ffd1, #00F3A3);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #5affc9, #00F3A3);
+  background-image: -moz-linear-gradient(top, #73ffd1, #00F3A3);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #5affc9, #00F3A3);
+  background-image: -ms-linear-gradient(top, #73ffd1, #00F3A3);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #5affc9, #00F3A3);
+  background-image: -o-linear-gradient(top, #73ffd1, #00F3A3);
   /* Opera 11.10+ */
-  background-image: linear-gradient(top, #5affc9, #00F3A3);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5affc9', EndColorStr='#00F3A3');
-  color: #008d5f;
+  background-image: linear-gradient(top, #73ffd1, #00F3A3);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#73ffd1', EndColorStr='#00F3A3');
+  color: #00734d;
 }
 /* line 6, ../../../sass/base/_themes.scss */
 .theme-primary h1, .theme-primary h2, .theme-primary h3 {
-  color: #008d5f;
+  color: #00734d;
 }
 /* line 10, ../../../sass/base/_themes.scss */
 .theme-primary h4, .theme-primary h5, .theme-primary h6, .theme-primary p {
@@ -523,23 +523,23 @@ body {
 .theme-secondary {
   background-color: #1380F2;
   /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#74b4f7), to(#1380F2));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8cc1f9), to(#1380F2));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #74b4f7, #1380F2);
+  background-image: -webkit-linear-gradient(top, #8cc1f9, #1380F2);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #74b4f7, #1380F2);
+  background-image: -moz-linear-gradient(top, #8cc1f9, #1380F2);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #74b4f7, #1380F2);
+  background-image: -ms-linear-gradient(top, #8cc1f9, #1380F2);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #74b4f7, #1380F2);
+  background-image: -o-linear-gradient(top, #8cc1f9, #1380F2);
   /* Opera 11.10+ */
-  background-image: linear-gradient(top, #74b4f7, #1380F2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#74b4f7', EndColorStr='#1380F2');
-  color: #084e97;
+  background-image: linear-gradient(top, #8cc1f9, #1380F2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#8cc1f9', EndColorStr='#1380F2');
+  color: #07417f;
 }
 /* line 20, ../../../sass/base/_themes.scss */
 .theme-secondary h1, .theme-secondary h2, .theme-secondary h3 {
-  color: #084e97;
+  color: #07417f;
 }
 /* line 23, ../../../sass/base/_themes.scss */
 .theme-secondary h4, .theme-secondary h5, .theme-secondary h6, .theme-secondary p {
@@ -553,23 +553,23 @@ body {
 .theme-tertiary {
   background-color: #FF9900;
   /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc266), to(#FF9900));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc80), to(#FF9900));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #ffc266, #FF9900);
+  background-image: -webkit-linear-gradient(top, #ffcc80, #FF9900);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #ffc266, #FF9900);
+  background-image: -moz-linear-gradient(top, #ffcc80, #FF9900);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #ffc266, #FF9900);
+  background-image: -ms-linear-gradient(top, #ffcc80, #FF9900);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #ffc266, #FF9900);
+  background-image: -o-linear-gradient(top, #ffcc80, #FF9900);
   /* Opera 11.10+ */
-  background-image: linear-gradient(top, #ffc266, #FF9900);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffc266', EndColorStr='#FF9900');
-  color: #995c00;
+  background-image: linear-gradient(top, #ffcc80, #FF9900);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffcc80', EndColorStr='#FF9900');
+  color: #804d00;
 }
 /* line 33, ../../../sass/base/_themes.scss */
 .theme-tertiary h1, .theme-tertiary h2, .theme-tertiary h3 {
-  color: #995c00;
+  color: #804d00;
 }
 /* line 36, ../../../sass/base/_themes.scss */
 .theme-tertiary h4, .theme-tertiary h5, .theme-tertiary h6, .theme-tertiary p {
@@ -618,7 +618,7 @@ strong {
 /* line 71, ../../../sass/modules/_typography.scss */
 a {
   font-family: 'noto_sansregular';
-  color: #993400;
+  color: #802b00;
   text-decoration: none;
 }
 /* line 75, ../../../sass/modules/_typography.scss */
@@ -634,8 +634,8 @@ a:hover, a:focus {
 /* line 85, ../../../sass/modules/_typography.scss */
 button,
 .focus-link {
-  background-color: #993400;
-  color: #ff9a66;
+  background-color: #802b00;
+  color: #ffab80;
   border: none;
   padding: 0.3em 1em;
   border-radius: 3px;
@@ -669,6 +669,15 @@ button:hover, button:focus,
     align-content: center;
     align-items: center;
   }
+}
+
+/* line 1, ../../../sass/pages/_style-guide.scss */
+.style-guide {
+  padding: 0;
+}
+/* line 3, ../../../sass/pages/_style-guide.scss */
+.style-guide section {
+  padding: 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
