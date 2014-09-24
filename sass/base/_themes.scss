@@ -2,6 +2,7 @@
 .theme {
     &-primary {
         @include linear-gradient($primaryLight, $primary);
+        background-attachment: fixed;
         color: $primaryDark;
         h1, h2, h3 {
             color: $primaryDark;
@@ -12,10 +13,12 @@
         }
         .sidebar {
             background-color: $primary;
+            background-attachment: fixed;
         }
     }
     &-secondary {
         @include linear-gradient($secondaryLight, $secondary);
+        background-attachment: fixed;
         color: $secondaryDark;
         h1, h2, h3 {
             color: $secondaryDark;
@@ -25,10 +28,12 @@
         }
         .sidebar {
             background-color: $secondary;
+            background-attachment: fixed;
         }
     }
     &-tertiary {
         @include linear-gradient($tertiaryLight, $tertiary);
+        background-attachment: fixed;
         color: $tertiaryDark;
         h1, h2, h3 {
             color: $tertiaryDark;
@@ -38,6 +43,7 @@
         }
         .sidebar {
             background-color: $tertiary;
+            background-attachment: fixed;
         }
     }
 }

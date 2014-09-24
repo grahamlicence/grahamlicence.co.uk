@@ -421,8 +421,8 @@ table {
 
 /* line 1, ../../../sass/base/_layout.scss */
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -505,21 +505,23 @@ body {
   /* Opera 11.10+ */
   background-image: linear-gradient(top, #73ffd1, #00F3A3);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#73ffd1', EndColorStr='#00F3A3');
+  background-attachment: fixed;
   color: #00734d;
 }
-/* line 6, ../../../sass/base/_themes.scss */
+/* line 7, ../../../sass/base/_themes.scss */
 .theme-primary h1, .theme-primary h2, .theme-primary h3 {
   color: #00734d;
 }
-/* line 10, ../../../sass/base/_themes.scss */
+/* line 11, ../../../sass/base/_themes.scss */
 .theme-primary h4, .theme-primary h5, .theme-primary h6, .theme-primary p {
   color: #005a3c;
 }
-/* line 13, ../../../sass/base/_themes.scss */
+/* line 14, ../../../sass/base/_themes.scss */
 .theme-primary .sidebar {
   background-color: #00F3A3;
+  background-attachment: fixed;
 }
-/* line 17, ../../../sass/base/_themes.scss */
+/* line 19, ../../../sass/base/_themes.scss */
 .theme-secondary {
   background-color: #1380F2;
   /* Fallback Color */
@@ -535,21 +537,23 @@ body {
   /* Opera 11.10+ */
   background-image: linear-gradient(top, #8cc1f9, #1380F2);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#8cc1f9', EndColorStr='#1380F2');
-  color: #07417f;
-}
-/* line 20, ../../../sass/base/_themes.scss */
-.theme-secondary h1, .theme-secondary h2, .theme-secondary h3 {
+  background-attachment: fixed;
   color: #07417f;
 }
 /* line 23, ../../../sass/base/_themes.scss */
+.theme-secondary h1, .theme-secondary h2, .theme-secondary h3 {
+  color: #07417f;
+}
+/* line 26, ../../../sass/base/_themes.scss */
 .theme-secondary h4, .theme-secondary h5, .theme-secondary h6, .theme-secondary p {
   color: #063566;
 }
-/* line 26, ../../../sass/base/_themes.scss */
+/* line 29, ../../../sass/base/_themes.scss */
 .theme-secondary .sidebar {
   background-color: #1380F2;
+  background-attachment: fixed;
 }
-/* line 30, ../../../sass/base/_themes.scss */
+/* line 34, ../../../sass/base/_themes.scss */
 .theme-tertiary {
   background-color: #FF9900;
   /* Fallback Color */
@@ -565,19 +569,21 @@ body {
   /* Opera 11.10+ */
   background-image: linear-gradient(top, #ffcc80, #FF9900);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffcc80', EndColorStr='#FF9900');
+  background-attachment: fixed;
   color: #804d00;
 }
-/* line 33, ../../../sass/base/_themes.scss */
+/* line 38, ../../../sass/base/_themes.scss */
 .theme-tertiary h1, .theme-tertiary h2, .theme-tertiary h3 {
   color: #804d00;
 }
-/* line 36, ../../../sass/base/_themes.scss */
+/* line 41, ../../../sass/base/_themes.scss */
 .theme-tertiary h4, .theme-tertiary h5, .theme-tertiary h6, .theme-tertiary p {
   color: #663d00;
 }
-/* line 39, ../../../sass/base/_themes.scss */
+/* line 44, ../../../sass/base/_themes.scss */
 .theme-tertiary .sidebar {
   background-color: #FF9900;
+  background-attachment: fixed;
 }
 
 @font-face {
