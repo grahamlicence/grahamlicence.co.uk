@@ -1,8 +1,9 @@
 {
-    "name": "template",
+    "name": "grahamlicence.co.uk",
     "author": "Graham Licence",
     "version": "0.1.0",
-    "description": "Grunt project template",
+    "description": "grahamlicence.co.uk",
+    "install": "If install fails run npm install from git shell as assemble downloads git file",
     "devDependencies": {
         "grunt": "~0.4.2",
         "grunt-combine-media-queries": "1.0.19",
@@ -12,13 +13,16 @@
         "grunt-contrib-compass": "~0.7.0",
         "grunt-contrib-concat": "~0.3.0",
         "grunt-contrib-watch": "~0.5.3",
+        "grunt-contrib-connect": "0.8.0",
         "grunt-remove": "0.1.0",
+        "grunt-assemble": "0.1.15",
         "matchdep": "0.1.2"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/grahamlicence/grunt-template.git"
+        "url": "git://github.com/grahamlicence/grunt-template.git"
     },
     "sass": "sass",
-    "css": "site/assets/styles"
+    "css": "dist/assets/styles",
+    "scripts": "dist/assets/scripts"
 }

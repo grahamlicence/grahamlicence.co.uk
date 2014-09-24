@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                     'javascript/vendor/jquery-1.10.2.min.js',
                     'javascript/main.min.js'
                 ],
-                dest: 'site/assets/scripts/dist.min.js'
+                dest: '<%= pkg.scripts %>/dist.min.js'
             }
         },
 
@@ -86,6 +86,22 @@ module.exports = function(grunt) {
                 dest: '<%= pkg.css %>',
                 ext: '.min.css'
             }
+        },
+
+        assemble: {
+          options: {
+            layout: 'page.hbs',
+            layoutdir: './src/layouts/',
+            partials: './src/partials/**/*.hbs'
+          },
+          site: {
+            files: [{
+              cwd: './src/content/',
+              dest: './dist/',
+              expand: true,
+              src: '**/*.hbs'
+            }]
+          }
         },
 
         watch: {
