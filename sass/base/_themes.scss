@@ -1,0 +1,43 @@
+// themes
+.theme {
+    &-primary {
+        @include linear-gradient($primaryLight, $primary);
+        color: $primaryDark;
+        h1, h2, h3 {
+            color: $primaryDark;
+        }
+        // smaller text needs to be darker to pass contrast
+        h4, h5, h6, p {
+            color: darken($primary, 30%);
+        }
+        .sidebar {
+            background-color: $primary;
+        }
+    }
+    &-secondary {
+        @include linear-gradient($secondaryLight, $secondary);
+        color: $secondaryDark;
+        h1, h2, h3 {
+            color: $secondaryDark;
+        }
+        h4, h5, h6, p {
+            color: darken($secondary, 30%);
+        }
+        .sidebar {
+            background-color: $secondary;
+        }
+    }
+    &-tertiary {
+        @include linear-gradient($tertiaryLight, $tertiary);
+        color: $tertiaryDark;
+        h1, h2, h3 {
+            color: $tertiaryDark;
+        }
+        h4, h5, h6, p {
+            color: darken($tertiary, 30%);
+        }
+        .sidebar {
+            background-color: $tertiary;
+        }
+    }
+}
