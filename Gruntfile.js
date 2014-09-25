@@ -105,31 +105,41 @@ module.exports = function(grunt) {
         },
 
         assemble: {
-          options: {
-            layout: 'page.hbs',
-            layoutdir: './src/layouts/',
-            partials: './src/partials/**/*.hbs',
-            production: false
-          },
-          prod: {
             options: {
-                production: true
+                layout: 'page.hbs',
+                layoutdir: './src/layouts/',
+                partials: './src/partials/**/*.hbs',
+                production: false,
+                plugins: ['sitemap']
             },
-            files: [{
-              cwd: './src/content/',
-              dest: './dist/',
-              expand: true,
-              src: '**/*.hbs'
-            }]
-          },
-          dev: {
-            files: [{
-              cwd: './src/content/',
-              dest: './dist/',
-              expand: true,
-              src: '**/*.hbs'
-            }]
-          }
+            prod: {
+                options: {
+                    production: true
+                },
+                files: [{
+                  cwd: './src/content/',
+                  dest: './dist/',
+                  expand: true,
+                  src: '**/*.hbs'
+                }]
+            },
+            dev: {
+                files: [{
+                  cwd: './src/content/',
+                  dest: './dist/',
+                  expand: true,
+                  src: '**/*.hbs'
+                }]
+            }
+        },
+
+        // it's bit buggy on windows https://github.com/RayViljoen/grunt-sitemap/issues/9
+        // remove line 16 url += '/'; on compile node_module script
+        sitemap: {
+            dist: {
+                siteRoot: 'dist',
+                changefreq: 'weekly'
+            }
         },
 
         watch: {
@@ -142,13 +152,13 @@ module.exports = function(grunt) {
             },
             html: {
                 files: 'src/**/*.hbs',
-                tasks: ['assemble']
+                tasks: ['assemble:dev']
             }
         }
     });
 
     // minify assets for release
-    grunt.registerTask('release', ['compass', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod']);
+    grunt.registerTask('release', ['compass', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod', 'sitemap']);
 
     // build and watch html/css
     grunt.registerTask('default', ['compass', 'assemble:dev', 'connect', 'watch']);

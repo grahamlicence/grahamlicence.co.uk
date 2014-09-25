@@ -3,6 +3,7 @@
     "author": "Graham Licence",
     "version": "0.1.0",
     "description": "grahamlicence.co.uk",
+    "homepage": "http://www.grahamlicence.co.uk",
     "install": "If install fails run npm install from git shell as assemble downloads git file",
     "devDependencies": {
         "grunt": "~0.4.2",
@@ -17,6 +18,7 @@
         "grunt-concurrent": "0.5.0",
         "grunt-remove": "0.1.0",
         "grunt-assemble": "0.1.15",
+        "grunt-sitemap": "1.1.0",
         "matchdep": "0.1.2"
     },
     "repository": {
