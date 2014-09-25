@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <title>Dev test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css"> -->
+    {{#if production}}
+        <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
+    {{else}}
+        <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
+    {{/if}}
 </head>
 <body class="{{ this.page.theme }}">
 
