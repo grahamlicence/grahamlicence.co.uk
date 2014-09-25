@@ -20,13 +20,20 @@ module.exports = function(grunt) {
           //   for us to track and install node dependencies 
         
         pkg: grunt.file.readJSON('package.json'),
+
+        // asset paths
+        project: {
+            sassDir: '<%= pkg.settings.sassPath %>',
+            cssDir: '<%= pkg.settings.cssPath %>',
+            jsDir: '<%= pkg.settings.scriptsPath %>'
+        },
         
         compass: {
             dev: {
                 options: {
-                    sassDir: "<%= pkg.sass %>",                                                       
-                    cssDir: "<%= pkg.css %>",
-                    outputStyle: "expanded",
+                    sassDir: '<%= project.sassDir %>',
+                    cssDir: '<%= project.cssDir %>',
+                    outputStyle: 'expanded',
                     noLineComments: false,
                     sourcemap: true
                 }
@@ -43,10 +50,10 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    'javascript/vendor/jquery-1.10.2.min.js',
+                    'javascript/vendor/*.js',
                     'javascript/main.min.js'
                 ],
-                dest: '<%= pkg.scripts %>/dist.min.js'
+                dest: '<%= project.jsDir %>/dist.min.js'
             }
         },
 
@@ -57,7 +64,7 @@ module.exports = function(grunt) {
             },
             your_target: {
                 files: {
-                    '<%= pkg.css %>': ['<%= pkg.css %>/*.css']
+                    '<%= project.cssDir %>': ['<%= project.cssDir %>/*.css']
                 }
             }
         },
@@ -81,9 +88,9 @@ module.exports = function(grunt) {
             },
             minify: {
                 expand: true,
-                cwd: '<%= pkg.css %>',
+                cwd: '<%= project.cssDir %>',
                 src: ['*.css', '!*.min.css'],
-                dest: '<%= pkg.css %>',
+                dest: '<%= project.cssDir %>',
                 ext: '.min.css'
             }
         },
@@ -101,9 +108,21 @@ module.exports = function(grunt) {
           options: {
             layout: 'page.hbs',
             layoutdir: './src/layouts/',
-            partials: './src/partials/**/*.hbs'
+            partials: './src/partials/**/*.hbs',
+            production: false
           },
-          site: {
+          prod: {
+            options: {
+                production: true
+            },
+            files: [{
+              cwd: './src/content/',
+              dest: './dist/',
+              expand: true,
+              src: '**/*.hbs'
+            }]
+          },
+          dev: {
             files: [{
               cwd: './src/content/',
               dest: './dist/',
@@ -128,11 +147,9 @@ module.exports = function(grunt) {
         }
     });
 
+    // minify assets for release
+    grunt.registerTask('release', ['compass', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod']);
 
-      // The default task runs when you just run `grunt`.
-      //   "js" and "css" tasks process their respective files. 
-    
-    grunt.registerTask('js', ['uglify', 'concat']);
-
-    grunt.registerTask('default', ['compass', 'assemble', 'connect', 'watch']);
+    // build and watch html/css
+    grunt.registerTask('default', ['compass', 'assemble:dev', 'connect', 'watch']);
 };
