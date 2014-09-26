@@ -18,6 +18,7 @@
         "grunt-concurrent": "0.5.0",
         "grunt-remove": "0.1.0",
         "grunt-assemble": "0.1.15",
+        "handlebars-helpers": "0.5.8",
         "grunt-sitemap": "1.1.0",
         "matchdep": "0.1.2"
     },

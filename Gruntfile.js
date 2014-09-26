@@ -40,9 +40,9 @@ module.exports = function(grunt) {
             }
         },
 
-          // Concat concatenates the minified jQuery and our uglified code.
-          //   We should try to refrain from re-minifying libraries because
-          //   they probably do a better job of minifying their own code then us.   
+        // Concat concatenates the minified jQuery and our uglified code.
+        //   We should try to refrain from re-minifying libraries because
+        //   they probably do a better job of minifying their own code then us.   
         
         concat: {
             options: {
@@ -104,32 +104,29 @@ module.exports = function(grunt) {
           }
         },
 
+        // main assemble build files
+        assembleFiles: [{
+            cwd: './src/content/',
+            dest: './dist/',
+            expand: true,
+            src: '**/*.hbs'
+        }],
+
         assemble: {
             options: {
                 layout: 'page.hbs',
                 layoutdir: './src/layouts/',
                 partials: './src/partials/**/*.hbs',
-                production: false,
-                plugins: ['sitemap']
+                production: false
             },
             prod: {
                 options: {
                     production: true
                 },
-                files: [{
-                  cwd: './src/content/',
-                  dest: './dist/',
-                  expand: true,
-                  src: '**/*.hbs'
-                }]
+                files: '<%= assembleFiles %>'
             },
             dev: {
-                files: [{
-                  cwd: './src/content/',
-                  dest: './dist/',
-                  expand: true,
-                  src: '**/*.hbs'
-                }]
+                files: '<%= assembleFiles %>'
             }
         },
 
