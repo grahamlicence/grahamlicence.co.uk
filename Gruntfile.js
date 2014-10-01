@@ -13,6 +13,7 @@ module.exports = function(grunt) {
 
     /* load dependencies */
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('assemble');
 
     grunt.initConfig({
           // Read the package.json file for config values.
@@ -114,10 +115,15 @@ module.exports = function(grunt) {
 
         assemble: {
             options: {
+                collections: [{
+                  name: 'cartoon',
+                  sortby: 'posted',
+                  sortorder: 'descending'
+                }],
+                helpers: './src/helpers/**/*.js',
                 layout: 'page.hbs',
                 layoutdir: './src/layouts/',
-                partials: './src/partials/**/*.hbs',
-                production: false
+                partials: './src/partials/**/*'
             },
             prod: {
                 options: {
@@ -126,6 +132,9 @@ module.exports = function(grunt) {
                 files: '<%= assembleFiles %>'
             },
             dev: {
+                options: {
+                    production: false
+                },
                 files: '<%= assembleFiles %>'
             }
         },
@@ -153,6 +162,9 @@ module.exports = function(grunt) {
             }
         }
     });
+
+    // minify assets for release
+    grunt.registerTask('test',['assemble:posts']);
 
     // minify assets for release
     grunt.registerTask('release', ['compass', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod', 'sitemap']);
