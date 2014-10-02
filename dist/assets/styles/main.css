@@ -481,20 +481,22 @@ body {
 .main-nav ul {
   list-style: none;
   padding: 0;
+  overflow: hidden;
+  margin-bottom: 1em;
 }
-/* line 51, ../../../sass/base/_layout.scss */
+/* line 53, ../../../sass/base/_layout.scss */
 .main-nav li {
   float: left;
   margin-right: 0.3em;
 }
 
-/* line 57, ../../../sass/base/_layout.scss */
+/* line 59, ../../../sass/base/_layout.scss */
 .main-content {
   padding: 0.5em 1em;
   overflow: auto;
 }
 @media only screen and (min-width: 640px) {
-  /* line 57, ../../../sass/base/_layout.scss */
+  /* line 59, ../../../sass/base/_layout.scss */
   .main-content {
     width: 80%;
   }
@@ -570,7 +572,7 @@ body {
   font-style: normal;
 }
 /* line 55, ../../../sass/modules/_typography.scss */
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, li {
   font-family: 'noto_sansregular', Arial;
   colour: #1D1D1B;
   margin-top: 0;
@@ -582,28 +584,37 @@ h1 {
 }
 
 /* line 64, ../../../sass/modules/_typography.scss */
-p {
+p, li {
   font-size: 1.1em;
 }
 
 /* line 68, ../../../sass/modules/_typography.scss */
+li li {
+  font-size: 1em;
+}
+/* line 70, ../../../sass/modules/_typography.scss */
+li li li {
+  font-size: 1em;
+}
+
+/* line 76, ../../../sass/modules/_typography.scss */
 strong {
   font-family: 'noto_sansbold';
 }
 
-/* line 72, ../../../sass/modules/_typography.scss */
+/* line 80, ../../../sass/modules/_typography.scss */
 a {
   font-family: 'noto_sansregular';
   color: #014722;
   text-decoration: none;
 }
-/* line 79, ../../../sass/modules/_typography.scss */
+/* line 87, ../../../sass/modules/_typography.scss */
 a:hover, a:focus {
   text-decoration: underline;
   outline: none;
 }
 
-/* line 86, ../../../sass/modules/_typography.scss */
+/* line 94, ../../../sass/modules/_typography.scss */
 button,
 .focus-link {
   background-color: black;
@@ -612,7 +623,7 @@ button,
   padding: 0.3em 1em;
   border-radius: 3px;
 }
-/* line 93, ../../../sass/modules/_typography.scss */
+/* line 101, ../../../sass/modules/_typography.scss */
 button:hover, button:focus,
 .focus-link:hover,
 .focus-link:focus {

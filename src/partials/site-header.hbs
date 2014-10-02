@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Dev test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Graham Licence" />
+    <link rel="canonical" href="http://www.grahamlicence.co.uk/">
     {{#if production}}
-        <link rel="stylesheet" type="text/css" href="assets/styles/main.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/main.min.css">
     {{else}}
-        <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
     {{/if}}
 </head>
 <body class="{{ this.page.theme }}">

@@ -1,10 +1,5 @@
-// colours
-$primary: #00F3A3;          // green
-$secondary: #1380F2;        // blue
-$tertiary: #FF9900;         // yellow
-$complementary: #FF5600;    // orange
-
-$primary: #93D1E2;          // blue
+// Colours
+$primary: #93D1E2;          // light blue
 $secondary: #1380F2;        // blue
 $tertiary: #F3B802;         // yellow
 $complementary: #014722;    // green
@@ -12,12 +7,6 @@ $complementary: #014722;    // green
 $grey: #585858;
 $black: #1D1D1B;
 $white: #E5E6E7;
-
-// temp greyscale
-// $primary: #cecece;          // green
-// $secondary: #333;        // blue
-// $tertiary: #222;         // yellow
-// $complementary: #999;    // orange
 
 $change: 25%;
 
@@ -32,7 +21,6 @@ $tertiaryLight: lighten($tertiary, 35%);
 
 $complementaryDark: darken($complementary, $change);
 $complementaryLight: lighten($complementary, $change);
-
 
 // Breakpoints
 $small: 'only screen and (min-width: 640px)';
