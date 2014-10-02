@@ -54,6 +54,7 @@
 
 h1, h2, h3, h4, h5, h6, p { 
     font-family: 'noto_sansregular', Arial;
+    colour: $black;
     margin-top: 0;
 }
 h1 { 
@@ -70,10 +71,10 @@ strong {
 
 a {
     font-family: 'noto_sansregular';
-    color: $complementaryDark;
+    color: $complementary;
     text-decoration: none;
     &:visited {
-        color: $complementary;
+        // color: $complementaryDark;
     }
     &:hover,
     &:focus {

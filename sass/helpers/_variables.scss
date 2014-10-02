@@ -3,7 +3,14 @@ $primary: #00F3A3;          // green
 $secondary: #1380F2;        // blue
 $tertiary: #FF9900;         // yellow
 $complementary: #FF5600;    // orange
-$black: #01080F;
+
+$primary: #93D1E2;          // blue
+$secondary: #1380F2;        // blue
+$tertiary: #F3B802;         // yellow
+$complementary: #014722;    // green
+
+$grey: #585858;
+$black: #1D1D1B;
 $white: #E5E6E7;
 
 // temp greyscale
@@ -17,11 +24,11 @@ $change: 25%;
 $primaryDark: darken($primary, $change);
 $primaryLight: lighten($primary, $change);
 
-$secondaryDark: darken($secondary, $change);
-$secondaryLight: lighten($secondary, $change);
+$secondaryDark: darken($secondary, 35%);
+$secondaryLight: lighten($secondary, 35%);
 
-$tertiaryDark: darken($tertiary, $change);
-$tertiaryLight: lighten($tertiary, $change);
+$tertiaryDark: darken($tertiary, 35%);
+$tertiaryLight: lighten($tertiary, 35%);
 
 $complementaryDark: darken($complementary, $change);
 $complementaryLight: lighten($complementary, $change);
