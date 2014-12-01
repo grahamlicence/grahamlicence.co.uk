@@ -447,81 +447,81 @@ body {
   max-width: 70em;
 }
 @media only screen and (min-width: 640px) {
-  /* line 20, ../../../sass/base/_layout.scss */
-  .wrapper {
+  /* line 23, ../../../sass/base/_layout.scss */
+  .blog .wrapper {
     height: 100%;
     display: flex;
   }
 }
 
-/* line 29, ../../../sass/base/_layout.scss */
+/* line 31, ../../../sass/base/_layout.scss */
 .sidebar {
   overflow: hidden;
   padding: 1em 1em 0.5em;
-  width: 100%;
   background-color: #E5E6E7;
   background-attachment: fixed;
+  width: 100%;
 }
 @media only screen and (min-width: 640px) {
-  /* line 29, ../../../sass/base/_layout.scss */
-  .sidebar {
+  /* line 37, ../../../sass/base/_layout.scss */
+  .blog .sidebar {
     width: 20%;
   }
 }
-/* line 38, ../../../sass/base/_layout.scss */
+/* line 42, ../../../sass/base/_layout.scss */
 .sidebar a {
   color: #585858;
 }
-/* line 40, ../../../sass/base/_layout.scss */
+/* line 44, ../../../sass/base/_layout.scss */
 .sidebar a:visited {
   color: #252525;
 }
 
-/* line 47, ../../../sass/base/_layout.scss */
+/* line 51, ../../../sass/base/_layout.scss */
 .main-nav ul {
   list-style: none;
   padding: 0;
   overflow: hidden;
   margin-bottom: 1em;
 }
-/* line 53, ../../../sass/base/_layout.scss */
+/* line 57, ../../../sass/base/_layout.scss */
 .main-nav li {
   float: left;
   margin-right: 0.3em;
 }
 
-/* line 59, ../../../sass/base/_layout.scss */
+/* line 63, ../../../sass/base/_layout.scss */
 .main-content {
   padding: 0.5em 1em;
   overflow: auto;
+  width: 100%;
 }
 @media only screen and (min-width: 640px) {
-  /* line 59, ../../../sass/base/_layout.scss */
-  .main-content {
+  /* line 67, ../../../sass/base/_layout.scss */
+  .blog .main-content {
     width: 80%;
   }
 }
 
 @media only screen and (min-width: 640px) {
-  /* line 67, ../../../sass/base/_layout.scss */
+  /* line 74, ../../../sass/base/_layout.scss */
   .cartoons {
-    width: 50%;
     padding-left: 10%;
     padding-top: 4em;
   }
 }
 
-/* line 74, ../../../sass/base/_layout.scss */
+/* line 81, ../../../sass/base/_layout.scss */
 .cartoons-list {
   width: 30%;
   padding-top: 6em;
 }
-/* line 77, ../../../sass/base/_layout.scss */
+/* line 84, ../../../sass/base/_layout.scss */
 .cartoons-list ul {
   list-style: none;
   padding-left: 0;
 }
-/* line 80, ../../../sass/base/_layout.scss */
+/* line 87, ../../../sass/base/_layout.scss */
 .cartoons-list ul li {
   width: 100%;
   display: inline-block;
