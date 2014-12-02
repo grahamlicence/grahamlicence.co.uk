@@ -8,16 +8,16 @@
         <img src="/assets/images/general/{{ this.page.cartoonImage }}" alt="{{ this.page.cartoonAlt }}" />
         {{/is}}
         {{> body}} 
-    </main>
     
-    <aside class="cartoons-list">
-        <ul>
-        {{#withSort cartoon 'data.posted'}}
-          {{#each this.pages }}
-            <li><a href="{{ replaceStr this.dest 'dist' '' }}">{{ this.data.cartoonTitle }}</a></li>
-          {{/each}}
-        {{/withSort}}
-        </ul>
-    </aside>
+        <aside class="cartoons-list">
+            <ul>
+            {{#withSort cartoon 'data.posted'}}
+              {{#each this.pages }}
+                <li><a href="{{ replaceStr this.dest 'dist' '' }}">{{ this.data.cartoonTitle }}</a></li>
+              {{/each}}
+            {{/withSort}}
+            </ul>
+        </aside>
+    </main>
 
 {{>site-footer}}
