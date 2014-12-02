@@ -23,7 +23,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/grahamlicence/grunt-template.git"
+        "url": "git://github.com/grahamlicence/grahamlicence.co.uk.git"
     },
     "settings": {
         "sassPath": "sass",

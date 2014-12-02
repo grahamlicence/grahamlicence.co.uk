@@ -4,7 +4,9 @@
 
     <main class="main-content {{ this.page.class }}">
         <h1>{{ this.page.cartoonTitle }}</h1>
+        {{#is this.page.cartoon 'true'  }}
         <img src="/assets/images/general/{{ this.page.cartoonImage }}" alt="{{ this.page.cartoonAlt }}" />
+        {{/is}}
         {{> body}} 
     </main>
     
