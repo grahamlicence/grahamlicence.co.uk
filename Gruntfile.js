@@ -99,8 +99,10 @@ module.exports = function(grunt) {
         connect: {
           dev: {
             options: {
-              port: 8000,
-              base: './dist/'
+                open: true,
+                port: 8000,
+                hostname: 'localhost',
+                base: './dist/'
             }
           }
         },
@@ -148,17 +150,40 @@ module.exports = function(grunt) {
             }
         },
 
+        // notify when tasks completed, should work out of the box on OSX
+        // needs http://snarl.fullphat.net/ or similar for windoes
+        notify: {
+            watch: {
+                options: {
+                    title: 'Sass',
+                    message: 'Build complete'
+                }
+            },
+            assemble: {
+                options: {
+                    title: 'Assemble HTML',
+                    message: 'Build complete'
+                }
+            },
+            build: {
+                options: {
+                    title: 'Minify assets',
+                    message: 'Build complete'
+                }
+            }
+        },
+
         watch: {
             css: {
                 files: 'sass/**/*.scss',
-                tasks: ['compass'],
+                tasks: ['compass', 'notify:watch'],
                 options: {
                     livereload: true
                 }
             },
             html: {
                 files: 'src/**/*.hbs',
-                tasks: ['assemble:dev']
+                tasks: ['assemble:dev', 'notify:assemble']
             }
         }
     });
@@ -167,7 +192,7 @@ module.exports = function(grunt) {
     grunt.registerTask('test',['assemble:posts']);
 
     // minify assets for release
-    grunt.registerTask('release', ['compass', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod', 'sitemap']);
+    grunt.registerTask('release', ['compass', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod', 'sitemap', 'notify:build']);
 
     // build and watch html/css
     grunt.registerTask('default', ['compass', 'assemble:dev', 'connect', 'watch']);
