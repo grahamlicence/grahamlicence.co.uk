@@ -12,82 +12,141 @@ button {
   font-smoothing: antialiased;
 }
 
-html,
-body {
-    height: 100%;
+.main-nav a {
+    display: block;
+    text-decoration: none;
 }
-
-.wrapper {
-    width: 100%;
-    max-width: 70em;
-    .blog & {
-        @media #{$small} {
-            height: 100%;
-            display: flex;
-        }   
-    }
-}
-
-.sidebar {
-    overflow: hidden;
-    padding: 1em 1em 0.5em;
-    background-color: $white;
-    background-attachment: fixed;
-    width: 100%;
-    .blog & {
-        @media #{$small} {
-            width: 20%;
-        }
-    }
-    a {
-        color: $grey;
-        &:visited {
-            color: darken($grey, 20%);
-        }
-    }
-}
-
-.main-nav {
-    ul {
-        list-style: none;
-        padding: 0;
-        overflow: hidden;
-        margin-bottom: 1em;
-    }
-    li {
-        float: left;
-        margin-right: 0.3em;
-    }
+.main-nav .active {
+    text-decoration: underline;
 }
 
 .main-content {
-    padding: 0.5em 1em;
-    overflow: auto;
-    width: 100%;
-    .blog & {
-        @media #{$small} {
-            width: 80%;
-        }
+    background: #cecece;
+    color: #fff;
+    min-height: 400px;
+}
+
+.section h1 {
+}
+.section p {
+}
+
+.section-1 {
+    background: #00AEEF;
+    color: #fff;
+}
+
+.section-2 {
+    background: #8EA963;
+    color: #fff;
+}
+
+.section-3 {
+    background: #CC6601;
+    color: #fff;
+}
+
+@media(min-width:800px) {
+    .content-wrapper,
+    .main-footer {
+        margin: 0 auto;
+        max-width: 900px;
+        overflow: hidden;
+    }
+    .main-heading {
+        width: 30%;
+        max-width: 200px;
+        float: left;
+    }
+
+    .main-content {
+        width: 70%;
+        float: right;
+    }
+
+    .about {
+        float: left;
+        clear: left;
     }
 }
 
-.cartoons {
-    @media #{$small} {
-        // width: 50%;
-        padding-left: 10%;
-        padding-top: 4em;
-    }
-}
-.cartoons-list {
-    width: 30%;
-    padding-top: 6em;
-    ul {
-        list-style: none;
-        padding-left: 0;
-        li {
-            width: 100%;
-            display: inline-block;
-        }
-    }
-}
+
+// html,
+// body {
+//     height: 100%;
+// }
+
+// .wrapper {
+//     width: 100%;
+//     max-width: 70em;
+//     .blog & {
+//         @media #{$small} {
+//             height: 100%;
+//             display: flex;
+//         }   
+//     }
+// }
+
+// .sidebar {
+//     overflow: hidden;
+//     padding: 1em 1em 0.5em;
+//     background-color: $white;
+//     background-attachment: fixed;
+//     width: 100%;
+//     .blog & {
+//         @media #{$small} {
+//             width: 20%;
+//         }
+//     }
+//     a {
+//         color: $grey;
+//         &:visited {
+//             color: darken($grey, 20%);
+//         }
+//     }
+// }
+
+// .main-nav {
+//     ul {
+//         list-style: none;
+//         padding: 0;
+//         overflow: hidden;
+//         margin-bottom: 1em;
+//     }
+//     li {
+//         float: left;
+//         margin-right: 0.3em;
+//     }
+// }
+
+// .main-content {
+//     padding: 0.5em 1em;
+//     overflow: auto;
+//     width: 100%;
+//     .blog & {
+//         @media #{$small} {
+//             width: 80%;
+//         }
+//     }
+// }
+
+// .cartoons {
+//     @media #{$small} {
+//         // width: 50%;
+//         padding-left: 10%;
+//         padding-top: 4em;
+//     }
+// }
+// .cartoons-list {
+//     width: 30%;
+//     padding-top: 6em;
+//     ul {
+//         list-style: none;
+//         padding-left: 0;
+//         li {
+//             width: 100%;
+//             display: inline-block;
+//         }
+//     }
+// }
         

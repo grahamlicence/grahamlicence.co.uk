@@ -1,11 +1,15 @@
 {{>site-header}}
 
-    {{>sidebar}}
 
-    <main class="main-content {{ this.page.class }}">
-        {{#markdown}} 
-          {{> body}} 
-        {{/markdown}}
-    </main>
+        
+        <main class="main-content main-1">
+	        {{#markdown}} 
+	          {{> body}} 
+	        {{/markdown}}
+        </main>
+
+    	{{>sidebar}}
+    	
+    </div>
 
 {{>site-footer}}
