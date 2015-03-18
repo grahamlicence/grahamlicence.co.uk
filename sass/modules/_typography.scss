@@ -79,10 +79,10 @@ strong {
 
 a {
     font-family: 'noto_sansregular';
-    color: $complementary;
+    color: $tertiary;
     text-decoration: none;
     &:visited {
-        // color: $complementaryDark;
+        // color: $tertiaryDark;
     }
     &:hover,
     &:focus {
@@ -93,13 +93,13 @@ a {
 
 button,
 .focus-link {
-    background-color: $complementaryDark;
-    color: $complementaryLight;
+    background-color: $tertiaryDark;
+    color: $tertiaryLight;
     border: none;
     padding: 0.3em 1em;
     border-radius: 3px;
     &:hover,
     &:focus {
-        background-color: $complementary;
+        background-color: $tertiary;
     }
 }

@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 
     /* load dependencies */
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  grunt.loadNpmTasks('assemble');
+    
+    grunt.loadNpmTasks('assemble');
 
     grunt.initConfig({
           // Read the package.json file for config values.
@@ -51,8 +52,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    'javascript/vendor/*.js',
-                    'javascript/main.min.js'
+                    'dist/javascript/vendor/*.js',
+                    'dist/javascript/main.min.js'
                 ],
                 dest: '<%= project.jsDir %>/dist.min.js'
             }
@@ -75,9 +76,9 @@ module.exports = function(grunt) {
         uglify: {
             build: {
                 src: [
-                    'javascript/build/*'
+                    'dist/javascript/build/*'
                 ],
-                dest: 'javascript/main.min.js'
+                dest: 'dist/javascript/main.min.js'
             }
         },
 

@@ -18,9 +18,6 @@ $secondaryLight: lighten($secondary, 35%);
 $tertiaryDark: darken($tertiary, 35%);
 $tertiaryLight: lighten($tertiary, 35%);
 
-$complementaryDark: darken($complementary, $change);
-$complementaryLight: lighten($complementary, $change);
-
 // Breakpoints
 $small: 'only screen and (min-width: 640px)';
 $medium: 'only screen and (min-width: 768px)';

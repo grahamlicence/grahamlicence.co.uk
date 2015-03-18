@@ -435,150 +435,127 @@ button {
   font-smoothing: antialiased;
 }
 
-/* line 15, ../../../sass/base/_layout.scss */
-html,
-body {
-  height: 100%;
-}
-
-/* line 20, ../../../sass/base/_layout.scss */
-.wrapper {
-  width: 100%;
-  max-width: 70em;
-}
-@media only screen and (min-width: 640px) {
-  /* line 23, ../../../sass/base/_layout.scss */
-  .blog .wrapper {
-    height: 100%;
-    display: flex;
+@media only screen and (min-width: 768px) {
+  /* line 15, ../../../sass/base/_layout.scss */
+  .content-wrapper,
+  .main-footer {
+    margin: 0 auto;
+    max-width: 900px;
+    overflow: hidden;
   }
 }
 
-/* line 31, ../../../sass/base/_layout.scss */
-.sidebar {
-  overflow: hidden;
-  padding: 1em 1em 0.5em;
-  background-color: #E5E6E7;
-  background-attachment: fixed;
-  width: 100%;
-}
-@media only screen and (min-width: 640px) {
-  /* line 37, ../../../sass/base/_layout.scss */
-  .blog .sidebar {
-    width: 20%;
+@media only screen and (min-width: 768px) {
+  /* line 24, ../../../sass/base/_layout.scss */
+  .main-heading {
+    width: 30%;
+    max-width: 200px;
+    float: left;
   }
 }
+
+/* line 33, ../../../sass/base/_layout.scss */
+.main-nav a {
+  display: block;
+  text-decoration: none;
+}
+/* line 37, ../../../sass/base/_layout.scss */
+.main-nav .active {
+  text-decoration: underline;
+}
+
 /* line 42, ../../../sass/base/_layout.scss */
-.sidebar a {
-  color: #585858;
-}
-/* line 44, ../../../sass/base/_layout.scss */
-.sidebar a:visited {
-  color: #252525;
-}
-
-/* line 51, ../../../sass/base/_layout.scss */
-.main-nav ul {
-  list-style: none;
-  padding: 0;
-  overflow: hidden;
-  margin-bottom: 1em;
-}
-/* line 57, ../../../sass/base/_layout.scss */
-.main-nav li {
-  float: left;
-  margin-right: 0.3em;
-}
-
-/* line 63, ../../../sass/base/_layout.scss */
 .main-content {
-  padding: 0.5em 1em;
-  overflow: auto;
-  width: 100%;
+  background: #cecece;
+  color: #fff;
+  min-height: 400px;
 }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 768px) {
+  /* line 42, ../../../sass/base/_layout.scss */
+  .main-content {
+    width: 70%;
+    float: right;
+  }
+}
+
+/* line 52, ../../../sass/base/_layout.scss */
+.section-1 {
+  background: #00AEEF;
+  color: #fff;
+}
+
+/* line 57, ../../../sass/base/_layout.scss */
+.section-2 {
+  background: #8EA963;
+  color: #fff;
+}
+
+/* line 62, ../../../sass/base/_layout.scss */
+.section-3 {
+  background: #CC6601;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
   /* line 67, ../../../sass/base/_layout.scss */
-  .blog .main-content {
-    width: 80%;
+  .about {
+    float: left;
+    clear: left;
   }
-}
-
-@media only screen and (min-width: 640px) {
-  /* line 74, ../../../sass/base/_layout.scss */
-  .cartoons {
-    padding-left: 10%;
-    padding-top: 4em;
-  }
-}
-
-/* line 81, ../../../sass/base/_layout.scss */
-.cartoons-list {
-  width: 30%;
-  padding-top: 6em;
-}
-/* line 84, ../../../sass/base/_layout.scss */
-.cartoons-list ul {
-  list-style: none;
-  padding-left: 0;
-}
-/* line 87, ../../../sass/base/_layout.scss */
-.cartoons-list ul li {
-  width: 100%;
-  display: inline-block;
 }
 
 /* line 3, ../../../sass/base/_themes.scss */
 .theme-primary {
-  background-color: #93D1E2;
+  background-color: #00AEEF;
   /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8fcfd), to(#93D1E2));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#70d8ff), to(#00AEEF));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #f8fcfd, #93D1E2);
+  background-image: -webkit-linear-gradient(top, #70d8ff, #00AEEF);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #f8fcfd, #93D1E2);
+  background-image: -moz-linear-gradient(top, #70d8ff, #00AEEF);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #f8fcfd, #93D1E2);
+  background-image: -ms-linear-gradient(top, #70d8ff, #00AEEF);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #f8fcfd, #93D1E2);
+  background-image: -o-linear-gradient(top, #70d8ff, #00AEEF);
   /* Opera 11.10+ */
-  background-image: linear-gradient(top, #f8fcfd, #93D1E2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f8fcfd', EndColorStr='#93D1E2');
+  background-image: linear-gradient(top, #70d8ff, #00AEEF);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#70d8ff', EndColorStr='#00AEEF');
   background-attachment: fixed;
 }
 /* line 7, ../../../sass/base/_themes.scss */
 .theme-secondary {
-  background-color: #1380F2;
+  background-color: #8EA963;
   /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#bcdbfb), to(#1380F2));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e1e8d6), to(#8EA963));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #bcdbfb, #1380F2);
+  background-image: -webkit-linear-gradient(top, #e1e8d6, #8EA963);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #bcdbfb, #1380F2);
+  background-image: -moz-linear-gradient(top, #e1e8d6, #8EA963);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #bcdbfb, #1380F2);
+  background-image: -ms-linear-gradient(top, #e1e8d6, #8EA963);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #bcdbfb, #1380F2);
+  background-image: -o-linear-gradient(top, #e1e8d6, #8EA963);
   /* Opera 11.10+ */
-  background-image: linear-gradient(top, #bcdbfb, #1380F2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#bcdbfb', EndColorStr='#1380F2');
+  background-image: linear-gradient(top, #e1e8d6, #8EA963);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e1e8d6', EndColorStr='#8EA963');
   background-attachment: fixed;
 }
 /* line 11, ../../../sass/base/_themes.scss */
 .theme-tertiary {
-  background-color: #F3B802;
+  background-color: #CC6601;
   /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fee9a9), to(#F3B802));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#febf81), to(#CC6601));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #fee9a9, #F3B802);
+  background-image: -webkit-linear-gradient(top, #febf81, #CC6601);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #fee9a9, #F3B802);
+  background-image: -moz-linear-gradient(top, #febf81, #CC6601);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #fee9a9, #F3B802);
+  background-image: -ms-linear-gradient(top, #febf81, #CC6601);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #fee9a9, #F3B802);
+  background-image: -o-linear-gradient(top, #febf81, #CC6601);
   /* Opera 11.10+ */
-  background-image: linear-gradient(top, #fee9a9, #F3B802);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fee9a9', EndColorStr='#F3B802');
+  background-image: linear-gradient(top, #febf81, #CC6601);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#febf81', EndColorStr='#CC6601');
   background-attachment: fixed;
 }
 
@@ -630,7 +607,7 @@ strong {
 /* line 80, ../../../sass/modules/_typography.scss */
 a {
   font-family: 'noto_sansregular';
-  color: #014722;
+  color: #CC6601;
   text-decoration: none;
 }
 /* line 87, ../../../sass/modules/_typography.scss */
@@ -642,8 +619,8 @@ a:hover, a:focus {
 /* line 94, ../../../sass/modules/_typography.scss */
 button,
 .focus-link {
-  background-color: black;
-  color: #03c55e;
+  background-color: #1a0d00;
+  color: #febf81;
   border: none;
   padding: 0.3em 1em;
   border-radius: 3px;
@@ -652,31 +629,7 @@ button,
 button:hover, button:focus,
 .focus-link:hover,
 .focus-link:focus {
-  background-color: #014722;
-}
-
-/* line 1, ../../../sass/pages/_home.scss */
-.category {
-  margin-bottom: 2em;
-}
-@media only screen and (min-width: 1024px) {
-  /* line 1, ../../../sass/pages/_home.scss */
-  .category {
-    width: 50%;
-    display: inline-block;
-    padding: 0.5em;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /* line 12, ../../../sass/pages/_home.scss */
-  .home {
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-  }
+  background-color: #CC6601;
 }
 
 /* line 1, ../../../sass/pages/_style-guide.scss */

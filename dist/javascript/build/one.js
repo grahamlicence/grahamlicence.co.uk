@@ -22,4 +22,5 @@
 
 	$links.on('click', loadPage);
 
+
 })();
