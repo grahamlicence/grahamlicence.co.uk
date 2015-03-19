@@ -504,61 +504,6 @@ button {
   }
 }
 
-/* line 3, ../../../sass/base/_themes.scss */
-.theme-primary {
-  background-color: #00AEEF;
-  /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#70d8ff), to(#00AEEF));
-  /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #70d8ff, #00AEEF);
-  /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #70d8ff, #00AEEF);
-  /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #70d8ff, #00AEEF);
-  /* IE10 */
-  background-image: -o-linear-gradient(top, #70d8ff, #00AEEF);
-  /* Opera 11.10+ */
-  background-image: linear-gradient(top, #70d8ff, #00AEEF);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#70d8ff', EndColorStr='#00AEEF');
-  background-attachment: fixed;
-}
-/* line 7, ../../../sass/base/_themes.scss */
-.theme-secondary {
-  background-color: #8EA963;
-  /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e1e8d6), to(#8EA963));
-  /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #e1e8d6, #8EA963);
-  /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #e1e8d6, #8EA963);
-  /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #e1e8d6, #8EA963);
-  /* IE10 */
-  background-image: -o-linear-gradient(top, #e1e8d6, #8EA963);
-  /* Opera 11.10+ */
-  background-image: linear-gradient(top, #e1e8d6, #8EA963);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e1e8d6', EndColorStr='#8EA963');
-  background-attachment: fixed;
-}
-/* line 11, ../../../sass/base/_themes.scss */
-.theme-tertiary {
-  background-color: #CC6601;
-  /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#febf81), to(#CC6601));
-  /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #febf81, #CC6601);
-  /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #febf81, #CC6601);
-  /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #febf81, #CC6601);
-  /* IE10 */
-  background-image: -o-linear-gradient(top, #febf81, #CC6601);
-  /* Opera 11.10+ */
-  background-image: linear-gradient(top, #febf81, #CC6601);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#febf81', EndColorStr='#CC6601');
-  background-attachment: fixed;
-}
-
 @font-face {
   font-family: 'noto_sansregular';
   src: url("../fonts/notosans-regular-webfont.eot");

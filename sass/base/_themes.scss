@@ -1,15 +1,15 @@
 // themes
 .theme {
-    &-primary {
-        @include linear-gradient($primaryLight, $primary);
-        background-attachment: fixed;
-    }
-    &-secondary {
-        @include linear-gradient($secondaryLight, $secondary);
-        background-attachment: fixed;
-    }
-    &-tertiary {
-        @include linear-gradient($tertiaryLight, $tertiary);
-        background-attachment: fixed;
-    }
+    // &-primary {
+    //     @include linear-gradient($primaryLight, $primary);
+    //     background-attachment: fixed;
+    // }
+    // &-secondary {
+    //     @include linear-gradient($secondaryLight, $secondary);
+    //     background-attachment: fixed;
+    // }
+    // &-tertiary {
+    //     @include linear-gradient($tertiaryLight, $tertiary);
+    //     background-attachment: fixed;
+    // }
 }
