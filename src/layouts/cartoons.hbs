@@ -10,13 +10,18 @@
     
         <aside class="cartoons-list">
             <ul>
+                {{#if_eq this.data.group 'cartoons' }}
             {{#withSort cartoon 'data.posted'}}
               {{#each this.pages }}
                 <li><a href="{{ replaceStr this.dest 'dist' '' }}">{{ this.data.cartoonTitle }}</a></li>
               {{/each}}
             {{/withSort}}
+            {{else}}
+            oh {{ this.data.group }}
+                {{/if_eq}}
             </ul>
         </aside>
+
     </main>
     
     {{>sidebar}}

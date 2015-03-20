@@ -454,54 +454,61 @@ button {
   }
 }
 
-/* line 33, ../../../sass/base/_layout.scss */
-.main-nav a {
-  display: block;
-  text-decoration: none;
-}
-/* line 37, ../../../sass/base/_layout.scss */
-.main-nav .active {
-  text-decoration: underline;
-}
-
-/* line 42, ../../../sass/base/_layout.scss */
+/* line 32, ../../../sass/base/_layout.scss */
 .main-content {
+  padding: 10px;
   background: #cecece;
   color: #fff;
   min-height: 400px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 42, ../../../sass/base/_layout.scss */
+  /* line 32, ../../../sass/base/_layout.scss */
   .main-content {
     width: 70%;
     float: right;
+    padding: 0.5em 1em;
   }
 }
 
-/* line 52, ../../../sass/base/_layout.scss */
+/* line 44, ../../../sass/base/_layout.scss */
 .section-1 {
   background: #00AEEF;
   color: #fff;
 }
 
-/* line 57, ../../../sass/base/_layout.scss */
+/* line 49, ../../../sass/base/_layout.scss */
 .section-2 {
   background: #8EA963;
   color: #fff;
 }
 
-/* line 62, ../../../sass/base/_layout.scss */
+/* line 54, ../../../sass/base/_layout.scss */
 .section-3 {
   background: #CC6601;
   color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 67, ../../../sass/base/_layout.scss */
+  /* line 59, ../../../sass/base/_layout.scss */
   .about {
     float: left;
     clear: left;
   }
+}
+
+/* line 2, ../../../sass/modules/_navigation.scss */
+.main-nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 6, ../../../sass/modules/_navigation.scss */
+.main-nav a {
+  display: block;
+  text-decoration: none;
+}
+/* line 10, ../../../sass/modules/_navigation.scss */
+.main-nav .active {
+  text-decoration: underline;
 }
 
 @font-face {
