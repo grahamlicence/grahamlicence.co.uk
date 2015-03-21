@@ -496,21 +496,6 @@ button {
   }
 }
 
-/* line 2, ../../../sass/modules/_navigation.scss */
-.main-nav ul {
-  list-style: none;
-  padding-left: 0;
-}
-/* line 6, ../../../sass/modules/_navigation.scss */
-.main-nav a {
-  display: block;
-  text-decoration: none;
-}
-/* line 10, ../../../sass/modules/_navigation.scss */
-.main-nav .active {
-  text-decoration: underline;
-}
-
 @font-face {
   font-family: 'noto_sansregular';
   src: url("../fonts/notosans-regular-webfont.eot");
