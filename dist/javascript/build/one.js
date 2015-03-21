@@ -20,14 +20,12 @@
 			// console.log(JSON.parse(resp))
 			var $resp = $(resp),
 				$content = $resp.find('.main-content'),
-				title = $resp.find('title');
+				title = $resp.filter('title').text();
 
 			// console.log(resp)
 			$main.replaceWith($content);
 
 			// update page and history
-			console.log($resp)
-			console.log(title)
 			document.title = title;
 			if (hasHistory) {
 				history.pushState(null, title, link);
