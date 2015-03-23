@@ -17,12 +17,12 @@
 		$.ajax(
 			{url: link}
 		).done(function (resp) {
-			// console.log(resp)
+			// console.log(JSON.parse(resp))
 			var $resp = $(resp),
 				$content = $resp.find('.main-content'),
-				title = $resp.find('title').text;
+				title = $resp.filter('title').text();
 
-			console.log($content)
+			// console.log(resp)
 			$main.replaceWith($content);
 
 			// update page and history
