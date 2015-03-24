@@ -18,25 +18,6 @@
         <header class="main-heading">
             <h1>Title</h1>
 
-            <nav class="main-nav">                
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/cartoons/">General cartoons</a>
-                        {{#is data.class 'cartoons'}}
-                        <ul>
-                        {{#withSort cartoon 'data.posted'}}
-                          {{#each this.pages }}
-                            <li><a href="{{ replaceStr this.dest 'dist' '' }}">{{ this.data.title }}</a></li>
-                          {{/each}}
-                        {{/withSort}}
-                        </ul>
-                        {{/is}}
-                    </li>
-                    <li><a href="/bird-cartoons/">Bird cartoons</a></li>
-                    <li><a href="/insomnia-cartoons/">Insomnia cartoons</a></li>
-                </ul>
-            </nav>
+            {{>navigation}}
+            
         </header>

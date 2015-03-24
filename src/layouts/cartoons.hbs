@@ -9,7 +9,7 @@
         {{> body}} 
     
         <aside class="cartoons-list">
-            <ul>
+            {{!-- <ul>
                 {{#if_eq this.data.group 'cartoons' }}
             {{#withSort cartoon 'data.posted'}}
               {{#each this.pages }}
@@ -19,13 +19,26 @@
             {{else}}
             oh
                 {{/if_eq}}
+            </ul> --}}
 
-            {{#is this.data.group 'birdCartoon' }}
-            yep
-            {{else}}
-            nope
+                {{!-- {{#is this.page.group 'birdCartoon' }} --}}
+                
+            {{#is dirname 'dist/bird-cartoons' }} 
+            {{!-- yep --}}
+            {{!-- {{/is}}      --}}
+            <ul class="sub-nav">
+            {{#each pages }}
+            {{#is data.group 'birdCartoon' }} 
+
+                {{#is data.title 'Bird cartoons' }}
+                {{else}}
+                <li><a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a></li>
                 {{/is}}
+
+            {{/is}}
+            {{/each}}
             </ul>
+            {{/is}}
         </aside>
 
     </main>
