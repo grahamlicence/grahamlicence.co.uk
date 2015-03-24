@@ -17,8 +17,14 @@
               {{/each}}
             {{/withSort}}
             {{else}}
-            oh {{ this.data.group }}
+            oh
                 {{/if_eq}}
+
+            {{#is this.data.group 'birdCartoon' }}
+            yep
+            {{else}}
+            nope
+                {{/is}}
             </ul>
         </aside>
 
