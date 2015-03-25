@@ -14,7 +14,9 @@ module.exports = function(grunt) {
     /* load dependencies */
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     
+    // load non grunt prefixed tasks
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('handlebars-helper-moment');
 
     grunt.initConfig({
           // Read the package.json file for config values.
