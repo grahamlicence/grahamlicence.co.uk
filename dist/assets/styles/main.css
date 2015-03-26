@@ -445,6 +445,11 @@ button {
   }
 }
 
+/* line 24, ../../../sass/base/_layout.scss */
+.main-heading {
+  overflow: hidden;
+  padding: 0.5em;
+}
 @media only screen and (min-width: 768px) {
   /* line 24, ../../../sass/base/_layout.scss */
   .main-heading {
@@ -454,7 +459,7 @@ button {
   }
 }
 
-/* line 32, ../../../sass/base/_layout.scss */
+/* line 34, ../../../sass/base/_layout.scss */
 .main-content {
   padding: 10px;
   background: #cecece;
@@ -462,7 +467,7 @@ button {
   min-height: 400px;
 }
 @media only screen and (min-width: 768px) {
-  /* line 32, ../../../sass/base/_layout.scss */
+  /* line 34, ../../../sass/base/_layout.scss */
   .main-content {
     width: 70%;
     float: right;
@@ -470,30 +475,40 @@ button {
   }
 }
 
-/* line 44, ../../../sass/base/_layout.scss */
+/* line 46, ../../../sass/base/_layout.scss */
 .section-1 {
   background: #00AEEF;
   color: #fff;
 }
 
-/* line 49, ../../../sass/base/_layout.scss */
+/* line 51, ../../../sass/base/_layout.scss */
 .section-2 {
   background: #8EA963;
   color: #fff;
 }
 
-/* line 54, ../../../sass/base/_layout.scss */
+/* line 56, ../../../sass/base/_layout.scss */
 .section-3 {
   background: #CC6601;
   color: #fff;
 }
 
+/* line 61, ../../../sass/base/_layout.scss */
+.about {
+  padding: 0.5em 0.5em 0;
+}
 @media only screen and (min-width: 768px) {
-  /* line 59, ../../../sass/base/_layout.scss */
+  /* line 61, ../../../sass/base/_layout.scss */
   .about {
     float: left;
     clear: left;
   }
+}
+
+/* line 69, ../../../sass/base/_layout.scss */
+.main-footer {
+  font-size: 0.8em;
+  padding: 0 0.5em;
 }
 
 /* line 2, ../../../sass/modules/_navigation.scss */

@@ -22,6 +22,8 @@ button {
 }
 
 .main-heading {
+    overflow: hidden;
+    padding: 0.5em;
     @media #{$medium} {
         width: 30%;
         max-width: 200px;
@@ -57,9 +59,18 @@ button {
 }
 
 .about {
+    padding: 0.5em 0.5em 0;
     @media #{$medium} {
         float: left;
         clear: left;
+    }
+}
+
+.main-footer {
+    font-size: 0.8em;
+    padding: 0 0.5em;
+    a {
+
     }
 }
         
