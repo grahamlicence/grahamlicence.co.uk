@@ -1,47 +1,54 @@
 // temp test
 (function () {
-	var $navLinks = $('.main-nav a'),
-		hasHistory = ("pushState" in history),
-		page;
+	var hasHistory = ("pushState" in history);
 
 
-	function loadPage (e) {
+	function loadPage (link, newPage) {
+		var $main = $('.main-content');
+
+		$.ajax({url: link})
+			.done(function (resp) {
+				// console.log(JSON.parse(resp))
+				var $resp = $(resp),
+					$content = $resp.find('.main-content'),
+					title = $resp.filter('title').text();
+
+				// console.log(resp)
+				$main.replaceWith($content);
+				
+				// update page and history
+				document.title = title;
+				if (hasHistory && newPage) {
+					history.pushState(null, title, link);
+				}
+			});
+	}
+
+	function linkClick (e) {
+		var link = e.target.href;
+
+		// check if external link
+		if (e.target.hostname !== document.location.hostname) {
+			return;
+		}
 		e.preventDefault();
-		var $main = $('.main-content'),
-			$nav = $('.main-nav'),
-			link = e.target.href,
-			loc = document.location.href;
-
-		if (link === loc) {
+		// check if linking to current page
+		if (link === document.location.href) {
 			return;
 		}
 
-		function setSubNav () {
-		}
-
-		$.ajax(
-			{url: link}
-		).done(function (resp) {
-			// console.log(JSON.parse(resp))
-			var $resp = $(resp),
-				$content = $resp.find('.main-content'),
-				title = $resp.filter('title').text();
-
-			// console.log(resp)
-			$main.replaceWith($content);
-			
-			// update page and history
-			document.title = title;
-			if (hasHistory) {
-				history.pushState(null, title, link);
-			}
-		})
+		loadPage(link, true);
 
 	}
 
+	function pageChange (e) {
+		e.preventDefault();
+	    loadPage(document.location.href);
+	}
+
 	// add event handlers
-	$navLinks.on('click', loadPage);
-	$(document).on('click', '.sub-nav a', loadPage);
+	$(document).on('click', 'a', linkClick);
+	$(window).bind('popstate', pageChange);
 
 
 })();
