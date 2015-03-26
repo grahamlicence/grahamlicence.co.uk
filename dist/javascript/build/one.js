@@ -2,19 +2,27 @@
 (function () {
 	var hasHistory = ("pushState" in history);
 
-
+    /**
+     * Loads page via agax
+     * @private
+     * @param {Sring} link - href of page to load
+     * @param {Boolean} newPage - if a new page has been loaded add to history
+     */
 	function loadPage (link, newPage) {
-		var $main = $('.main-content');
+		var $main = $('.main-content'),
+			$nav = $('.main-nav');
 
 		$.ajax({url: link})
 			.done(function (resp) {
 				// console.log(JSON.parse(resp))
 				var $resp = $(resp),
 					$content = $resp.find('.main-content'),
+					$navigation = $resp.find('.main-nav'),
 					title = $resp.filter('title').text();
 
 				// console.log(resp)
 				$main.replaceWith($content);
+				$nav.replaceWith($navigation);
 				
 				// update page and history
 				document.title = title;
@@ -24,6 +32,11 @@
 			});
 	}
 
+    /**
+     * Link click events
+     * @private
+     * @param {Event} e - DOM event
+     */
 	function linkClick (e) {
 		var link = e.target.href;
 
@@ -41,6 +54,11 @@
 
 	}
 
+    /**
+     * Back/forward buttons
+     * @private
+     * @param {Event} e - DOM event
+     */
 	function pageChange (e) {
 		e.preventDefault();
 	    loadPage(document.location.href);

@@ -2,44 +2,37 @@
 
 
     <main class="main-content {{ this.page.class }}">
-        <h1>{{ this.page.cartoonTitle }}</h1>
-        {{#is this.page.cartoon 'true'  }}
-        <img src="/assets/images/general/{{ this.page.cartoonImage }}" alt="{{ this.page.cartoonAlt }}" />
-        {{/is}}
-        {{> body}} 
     
-        <aside class="cartoons-list">
-            {{!-- <ul>
-                {{#if_eq this.data.group 'cartoons' }}
-            {{#withSort cartoon 'data.posted'}}
-              {{#each this.pages }}
-                <li><a href="{{ replaceStr this.dest 'dist' '' }}">{{ this.data.cartoonTitle }}</a></li>
-              {{/each}}
-            {{/withSort}}
-            {{else}}
-            oh
-                {{/if_eq}}
-            </ul> --}}
-
-                {{!-- {{#is this.page.group 'birdCartoon' }} --}}
-                
-            {{#is dirname 'dist/bird-cartoons' }} 
-            {{!-- yep --}}
-            {{!-- {{/is}}      --}}
+        <nav class="cartoons-list">
             <ul class="sub-nav">
-            {{#each pages }}
-            {{#is data.group 'birdCartoon' }} 
 
-                {{#is data.title 'Bird cartoons' }}
-                {{else}}
-                <li><a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a></li>
-                {{/is}}
+            {{#is dirname 'dist/bird-cartoons' }} 
+
+                {{#each pages }}
+
+                    {{#is data.group 'birdCartoon' }} 
+
+                        {{#is data.title 'Bird cartoons' }}
+                        {{else}}
+                            <li {{#if isCurrentPage}} class="active"{{/if}}>
+                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a>
+                            </li>
+                        {{/is}}
+
+                    {{/is}}
+
+                {{/each}}
 
             {{/is}}
-            {{/each}}
+
             </ul>
-            {{/is}}
-        </aside>
+        </nav>
+        
+        <h1>{{ this.page.cartoonTitle }}</h1>
+        
+        {{!-- <img src="/assets/images/{{ this.page.cartoonImage }}" alt="{{ this.page.cartoonAlt }}" /> --}}
+        
+        {{> body}} 
 
     </main>
     

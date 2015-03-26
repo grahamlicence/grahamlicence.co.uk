@@ -1,15 +1,15 @@
 <nav class="main-nav" data-section="{{ this.page.group }}">                
     <ul>
-        <li>
+        <li {{#if_eq dirname 'dist/' }} class="active"{{/if_eq}}>
             <a href="/">Home</a>
         </li>
-        <li>
+        <li {{#if_eq dirname 'dist/cartoons' }} class="active"{{/if_eq}}>
             <a href="/cartoons/">General cartoons</a>
         </li>
-        <li>
+        <li {{#if_eq dirname 'dist/bird-cartoons' }} class="active"{{/if_eq}}>
             <a href="/bird-cartoons/">Bird cartoons</a>
         </li>
-        <li>
+        <li {{#if_eq dirname 'dist/insomnia-cartoons' }} class="active"{{/if_eq}}>
             <a href="/insomnia-cartoons/">Insomnia cartoons</a>
         </li>
     </ul>

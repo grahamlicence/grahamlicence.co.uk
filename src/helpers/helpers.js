@@ -17,4 +17,8 @@ module.exports.register = function (Handlebars, options) {
         }
     });
 
+    Handlebars.registerHelper('toLowerCase', function(str) {
+      return str.toLowerCase();
+    });
+
 };

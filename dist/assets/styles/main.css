@@ -584,6 +584,21 @@ button:hover, button:focus,
   background-color: #CC6601;
 }
 
+/* line 2, ../../../sass/pages/_cartoons.scss */
+.cartoons-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 6, ../../../sass/pages/_cartoons.scss */
+.cartoons-list li {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 11, ../../../sass/pages/_cartoons.scss */
+.cartoons-list .active a {
+  text-decoration: underline;
+}
+
 /* line 1, ../../../sass/pages/_style-guide.scss */
 .style-guide {
   padding: 0;
