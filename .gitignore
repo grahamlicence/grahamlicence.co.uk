@@ -3,3 +3,7 @@
 *.sublime-workspace
 *.css.map
 node_modules
+dev
+dist
+.DS_Store
+Thumbs.db
