@@ -1,6 +1,5 @@
-// temp test
 (function () {
-	var hasHistory = ("pushState" in history);
+	var hasHistory = ('pushState' in history);
 
     /**
      * Loads page via agax
@@ -45,6 +44,7 @@
 			return;
 		}
 		e.preventDefault();
+		
 		// check if linking to current page
 		if (link === document.location.href) {
 			return;

@@ -1,5 +1,6 @@
 <nav class="main-nav" data-section="{{ this.page.group }}">                
     <ul>
+        {{#if production}}
         <li {{#if_eq dirname 'dist/' }} class="active"{{/if_eq}}>
             <a href="/">Home</a>
         </li>
@@ -12,5 +13,20 @@
         <li {{#if_eq dirname 'dist/insomnia-cartoons' }} class="active"{{/if_eq}}>
             <a href="/insomnia-cartoons/">Insomnia cartoons</a>
         </li>
+
+        {{else}}
+        <li {{#if_eq dirname 'dev/' }} class="active"{{/if_eq}}>
+            <a href="/">Home</a>
+        </li>
+        <li {{#if_eq dirname 'dev/cartoons' }} class="active"{{/if_eq}}>
+            <a href="/cartoons/">General cartoons</a>
+        </li>
+        <li {{#if_eq dirname 'dev/bird-cartoons' }} class="active"{{/if_eq}}>
+            <a href="/bird-cartoons/">Bird cartoons</a>
+        </li>
+        <li {{#if_eq dirname 'dev/insomnia-cartoons' }} class="active"{{/if_eq}}>
+            <a href="/insomnia-cartoons/">Insomnia cartoons</a>
+        </li>
+        {{/if}}
     </ul>
 </nav>

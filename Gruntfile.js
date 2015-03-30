@@ -27,16 +27,28 @@ module.exports = function(grunt) {
         project: {
             sassDir: '<%= pkg.settings.sassPath %>',
             cssDir: '<%= pkg.settings.cssPath %>',
+            cssDevDir: '<%= pkg.settings.cssDevPath %>',
             jsDir: '<%= pkg.settings.scriptsPath %>'
         },
         
         compass: {
-            dev: {
+            prod: {
                 options: {
                     sassDir: '<%= project.sassDir %>',
                     cssDir: '<%= project.cssDir %>',
                     outputStyle: 'expanded',
+                    noLineComments: true,
+                    force: true,
+                    sourcemap: true
+                }
+            },
+            dev: {
+                options: {
+                    sassDir: '<%= project.sassDir %>',
+                    cssDir: '<%= project.cssDevDir %>',
+                    outputStyle: 'expanded',
                     noLineComments: false,
+                    force: true,
                     sourcemap: true
                 }
             }
@@ -52,8 +64,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    'dist/javascript/vendor/*.js',
-                    'dist/javascript/main.min.js'
+                    'javascript/vendor/*.js',
+                    'dist/assets/scripts/main.min.js'
                 ],
                 dest: '<%= project.jsDir %>/dist.min.js'
             }
@@ -76,9 +88,9 @@ module.exports = function(grunt) {
         uglify: {
             build: {
                 src: [
-                    'dist/javascript/build/*'
+                    'javascript/build/*'
                 ],
-                dest: 'dist/javascript/main.min.js'
+                dest: 'dist/assets/scripts/main.min.js'
             }
         },
 
@@ -98,24 +110,26 @@ module.exports = function(grunt) {
         },
 
         connect: {
-          dev: {
-            options: {
-                open: true,
-                port: 8000,
-                hostname: 'localhost',
-                base: './dist/'
+            dev: {
+                options: {
+                    open: true,
+                    port: 8000,
+                    hostname: 'localhost',
+                    base: './dev/'
+                }
+            },
+            prod: {
+                options: {
+                    open: true,
+                    keepalive: true,
+                    port: 8000,
+                    hostname: 'localhost',
+                    base: './dist/'
+                }
             }
-          }
         },
 
-        // main assemble build files
-        assembleFiles: [{
-            cwd: './src/content/',
-            dest: './dist/',
-            expand: true,
-            src: '**/*.hbs'
-        }],
-
+        // assemble templates
         assemble: {
             options: {
                 collections: [{
@@ -132,13 +146,23 @@ module.exports = function(grunt) {
                 options: {
                     production: true
                 },
-                files: '<%= assembleFiles %>'
+                files: [{
+                    cwd: './src/content/',
+                    dest: './dist/',
+                    expand: true,
+                    src: '**/*.hbs'
+                }]
             },
             dev: {
                 options: {
                     production: false
                 },
-                files: '<%= assembleFiles %>'
+                files: [{
+                    cwd: './src/content/',
+                    dest: './dev/',
+                    expand: true,
+                    src: '**/*.hbs'
+                }]
             }
         },
 
@@ -148,6 +172,24 @@ module.exports = function(grunt) {
             dist: {
                 siteRoot: 'dist',
                 changefreq: 'weekly'
+            }
+        },
+
+        copy: {
+            js: {
+                files: [
+                  {expand: true, src: ['javascript/**'], dest: 'dev/', filter: 'isFile'}
+                ]
+            },
+            assetsDev: {
+                files: [
+                  {expand: true, cwd: 'src/assets/', src: '**', dest: 'dev/assets/', filter: 'isFile'}
+                ]
+            },
+            assetsProd: {
+                files: [
+                  {expand: true, cwd: 'src/assets/', src: '**', dest: 'dist/assets/', filter: 'isFile'}
+                ]
             }
         },
 
@@ -168,7 +210,7 @@ module.exports = function(grunt) {
             },
             build: {
                 options: {
-                    title: 'Minify assets',
+                    title: 'Prod build',
                     message: 'Build complete'
                 }
             }
@@ -177,7 +219,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: 'sass/**/*.scss',
-                tasks: ['compass', 'notify:watch'],
+                tasks: ['compass:dev', 'notify:watch'],
                 options: {
                     livereload: true
                 }
@@ -185,16 +227,17 @@ module.exports = function(grunt) {
             html: {
                 files: 'src/**/*.hbs',
                 tasks: ['assemble:dev', 'notify:assemble']
+            },
+            js: {
+                files: 'javascript/**/*.js',
+                tasks: ['copy:js', 'notify:js']
             }
         }
     });
 
     // minify assets for release
-    grunt.registerTask('test',['assemble:posts']);
-
-    // minify assets for release
-    grunt.registerTask('release', ['compass', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod', 'sitemap', 'notify:build']);
+    grunt.registerTask('release', ['compass:prod', 'cmq', 'cssmin', 'uglify', 'concat', 'assemble:prod', 'copy:assetsProd', 'sitemap', 'connect:prod', 'notify:build']);
 
     // build and watch html/css
-    grunt.registerTask('default', ['compass', 'assemble:dev', 'connect', 'watch']);
+    grunt.registerTask('default', ['compass:dev', 'assemble:dev', 'copy:assetsDev',  'copy:js', 'connect:dev', 'watch']);
 };
