@@ -12,13 +12,13 @@
 
                     {{#is data.group 'birdCartoon' }} 
 
-                        {{#is data.title 'Bird cartoons' }}
+                        {{#is data.title 'Bird Cartoons' }}
                         {{else}}
                             <li {{#if isCurrentPage}} class="active"{{/if}}>
                                 {{#if production}}
-                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a>
+                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.cartoonTitle }}</a>
                                 {{else}}
-                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.title }}</a>
+                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.cartoonTitle }}</a>
                                 {{/if}}
                             </li>
                         {{/is}}
@@ -39,9 +39,9 @@
                         {{else}}
                             <li {{#if isCurrentPage}} class="active"{{/if}}>
                                 {{#if production}}
-                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a>
+                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.cartoonTitle }}</a>
                                 {{else}}
-                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.title }}</a>
+                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.cartoonTitle }}</a>
                                 {{/if}}
                             </li>
                         {{/is}}
@@ -80,8 +80,10 @@
         
         <h1>{{ this.page.cartoonTitle }}</h1>
         
-        {{!-- <img src="/assets/images/{{ this.page.cartoonImage }}" alt="{{ this.page.cartoonAlt }}" /> --}}
-        
+        {{#page.cartoonImage }}
+            <img src="/assets/images/{{ . }}" alt="{{ ../cartoonAlt }}" class="cartoon" />
+        {{/page.cartoonImage }}
+
         {{> body}} 
 
     </main>

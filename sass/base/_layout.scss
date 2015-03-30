@@ -29,6 +29,11 @@ button {
         max-width: 200px;
         float: left;
     }
+    h1 {
+        @media #{$medium} {
+            padding-left: 8px;
+        }
+    }
 }
 
 .main-content {
@@ -43,28 +48,22 @@ button {
     }
 }
 
-.section-1 {
-    background: #00AEEF;
-    color: #fff;
-}
-
-.section-2 {
-    background: #8EA963;
-    color: #fff;
-}
-
-.section-3 {
-    background: #CC6601;
-    color: #fff;
-}
-
 .about {
     padding: 0.5em 0.5em 0;
     @media #{$medium} {
-        float: left;
         clear: left;
+        float: left;
+        max-width: 200px;
+        padding-left: 8px;
+        width: 30%;
+        word-wrap: break-word;
     }
-}
+    a {
+        @media #{$medium} {
+            font-size: 0.8em;
+        }
+    }
+}    
 
 .main-footer {
     font-size: 0.8em;
