@@ -6,7 +6,7 @@
         <nav class="cartoons-list">
             <ul class="sub-nav">
 
-            {{#is dirname 'dist/bird-cartoons' }} 
+            {{#is this.page.group 'birdCartoon' }} 
 
                 {{#each pages }}
 
@@ -15,7 +15,57 @@
                         {{#is data.title 'Bird cartoons' }}
                         {{else}}
                             <li {{#if isCurrentPage}} class="active"{{/if}}>
+                                {{#if production}}
                                 <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a>
+                                {{else}}
+                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.title }}</a>
+                                {{/if}}
+                            </li>
+                        {{/is}}
+
+                    {{/is}}
+
+                {{/each}}
+
+            {{/is}}
+
+            {{#is this.page.group 'cartoons' }} 
+
+                {{#each pages }}
+
+                    {{#is data.group 'cartoons' }} 
+
+                        {{#is data.title 'Cartoons' }}
+                        {{else}}
+                            <li {{#if isCurrentPage}} class="active"{{/if}}>
+                                {{#if production}}
+                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a>
+                                {{else}}
+                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.title }}</a>
+                                {{/if}}
+                            </li>
+                        {{/is}}
+
+                    {{/is}}
+
+                {{/each}}
+
+            {{/is}}
+
+            {{#is this.page.group 'insomniaCartoons' }} 
+
+                {{#each pages }}
+
+                    {{#is data.group 'insomniaCartoons' }} 
+
+                        {{#is data.title 'Insomnia cartoons' }}
+                        {{else}}
+                            <li {{#if isCurrentPage}} class="active"{{/if}}>
+                                {{#if production}}
+                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a>
+                                {{else}}
+                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.title }}</a>
+                                {{/if}}
                             </li>
                         {{/is}}
 
