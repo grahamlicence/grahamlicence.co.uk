@@ -62,9 +62,9 @@
                         {{else}}
                             <li {{#if isCurrentPage}} class="active"{{/if}}>
                                 {{#if production}}
-                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.title }}</a>
+                                <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.cartoonTitle }}</a>
                                 {{else}}
-                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.title }}</a>
+                                <a href="{{ replaceStr this.dest 'dev' '' }}">{{ data.cartoonTitle }}</a>
                                 {{/if}}
                             </li>
                         {{/is}}
