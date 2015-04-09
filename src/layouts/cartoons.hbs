@@ -15,6 +15,7 @@
                         {{#is data.title 'Bird Cartoons' }}
                         {{else}}
                             <li {{#if isCurrentPage}} class="active"{{/if}}>
+                                {{!-- TODO: production is not being passed into the each --}}
                                 {{#if production}}
                                 <a href="{{ replaceStr this.dest 'dist' '' }}">{{ data.cartoonTitle }}</a>
                                 {{else}}
