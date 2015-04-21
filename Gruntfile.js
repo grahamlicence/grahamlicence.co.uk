@@ -170,7 +170,7 @@ module.exports = function(grunt) {
         // remove line 16 url += '/'; on compile node_module script
         sitemap: {
             dist: {
-                siteRoot: 'dist',
+                siteRoot: 'dist/',
                 changefreq: 'weekly'
             }
         },
