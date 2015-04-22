@@ -1,0 +1,4 @@
+Sitemap: http://www.grahamlicence.co.uk/sitemap.xml
+
+User-agent: *
+Disallow: 
