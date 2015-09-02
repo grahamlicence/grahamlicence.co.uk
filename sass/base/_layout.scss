@@ -21,13 +21,17 @@ button {
     }
 }
 
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .main-heading {
     overflow: hidden;
     padding: 0.5em;
+    width: 100%;
     @media #{$medium} {
         width: 30%;
-        max-width: 200px;
-        float: left;
     }
     h1 {
         @media #{$medium} {
@@ -41,22 +45,22 @@ button {
     background: #cecece;
     color: #fff;
     min-height: 400px;
+    width: 100%;
     @media #{$medium} {
         width: 70%;
-        float: right;
         padding: 0.5em 1em;
     }
 }
 
 .about {
     padding: 0.5em 0.5em 0;
+    width: 100%;
     @media #{$medium} {
-        clear: left;
-        float: left;
-        max-width: 200px;
         padding-left: 8px;
         width: 30%;
         word-wrap: break-word;
+        align-self: flex-end;
+        margin-top: -100%;
     }
     a {
         @media #{$medium} {
