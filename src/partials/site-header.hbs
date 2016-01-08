@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>{{ this.page.title }}</title>
+    <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Graham Licence" />
+    <meta name="description" content="{{page.description}}" />
     <link rel="canonical" href="http://www.grahamlicence.co.uk/">
     {{#if production}}
     <link rel="stylesheet" type="text/css" href="/assets/styles/main.min.css">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
     {{/if}}
 </head>
-<body class="{{ this.page.theme }}">
+<body class="{{ page.theme }}">
 
     <div class="content-wrapper">
         <header class="main-heading">
