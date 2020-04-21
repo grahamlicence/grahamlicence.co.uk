@@ -21,7 +21,7 @@
         "grunt-remove": "0.1.0",
         "grunt-sitemap": "1.1.0",
         "assemble": "~0.4.35",
-        "matchdep": "0.1.2"
+        "matchdep": "2.0.0"
     },
     "repository": {
         "type": "git",
